@@ -27,26 +27,12 @@ and Data was built with another Application which i made too
 
 ### Register_Screens
 
-<table>
-  <tr>
-    <td>
-      <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242902948-d4af62a6-eae8-4859-97a1-d401b08ebc72.jpg" width="250" height="500"/>
-    </td>
-    <td>
-      <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242902557-b5582b64-d4fa-468a-b6a0-d15601d3dd64.jpg" width="250" height="500"/>
-    </td>
-    <td>
-      <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242903132-dc3d2e43-0010-4ce6-9ed2-b8bb5b5a683d.jpg" width="250" height="500"/>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242903264-6ec8fa57-76ae-44e3-8027-a73c0851e666.jpg" width="250" height="500"/>
-    </td>
-  </tr>
- 
-  
-</table>
+<p align = "left" >
+  <img width="250" height="500" src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242902948-d4af62a6-eae8-4859-97a1-d401b08ebc72.jpg">
+  <img width="250" height="500"  src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242902557-b5582b64-d4fa-468a-b6a0-d15601d3dd64.jpg"> 
+  <img width="250" height="500" src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242903132-dc3d2e43-0010-4ce6-9ed2-b8bb5b5a683d.jpg"> 
+  <img width="250" height="500" src="https://github-production-user-asset-6210df.s3.amazonaws.com/104721363/242903264-6ec8fa57-76ae-44e3-8027-a73c0851e666.jpg"> 
+</p>
 
 
 ### Shopping_Screens
