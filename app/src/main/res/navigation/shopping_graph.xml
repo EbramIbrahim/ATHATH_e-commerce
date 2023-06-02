@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shopping_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.home_screen.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/from_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.search_screen.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.cart_screen.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/cart_fragment">
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.profile_screen.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/action_profileFragment_to_billingFragment"
+            app:destination="@id/billingFragment"
+            app:enterAnim="@anim/from_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_userAccountFragment"
+            app:destination="@id/userAccountFragment"
+            app:enterAnim="@anim/from_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/from_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_orderDetailsScreen"
+            app:destination="@id/orderDetailsScreen"
+            app:enterAnim="@anim/from_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.product_details_screen.ProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/product_details_fragment">
+        <argument
+            android:name="product"
+            app:argType="com.example.athath.data.models.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseCategoryFragment"
+        android:name="com.example.athath.presenntation.categories.base_category_screens.BaseCategoryFragment"
+        android:label="BaseCategoryFragment"
+        tools:layout="@layout/base_category">
+        <action
+            android:id="@+id/action_baseCategoryFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.address_screen.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/address_fragment"/>
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.billing_screen.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <argument
+            android:name="totalPrice"
+            app:argType="float"
+           />
+        <argument
+            android:name="cartProduct"
+            app:argType="com.example.athath.data.models.CartProduct[]"
+             />
+
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.athath.presenntation.shopping_screens.orders_screen.OrdersFragment"
+        android:label="OrdersFragment"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailsScreen"
+            app:destination="@id/orderDetailsScreen"
+            app:enterAnim="@anim/from_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsScreen"
+        android:name="com.example.athath.presenntation.shopping_screens.orders_screen.order_details_screen.OrderDetailsScreen"
+        android:label="OrderDetailsScreen"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="order"
+            app:argType="com.example.athath.data.models.orders.Order" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.example.athath.presenntation.login_register.user_account_screen.UserAccountFragment"
+        android:label="UserAccountFragment"
+        tools:layout="@layout/fragment_user_account"/>
+</navigation>

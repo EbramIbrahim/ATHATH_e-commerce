@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Athath</string>
+    <string name="rightAddress">The Right Address For Shopping\nAny day</string>
+    <string name="text_quality">it is now very easy to reach the\nbest quality among the\nproducts on the interne!</string>
+    <string name="athath">ATHATH</string>
+    <string name="search_now">Search Now</string>
+    <string name="empty_cart">your shopping cart is empty</string>
+    <string name="payment_instructions">ATHATH app does not support virtual payments. You can pay when you receive your order</string>
+
+</resources>

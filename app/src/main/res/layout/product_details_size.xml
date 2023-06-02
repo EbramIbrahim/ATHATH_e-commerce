@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/productSizeShadow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:src="#B8D9FA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/productImageColor"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@color/g_gray700"
+        app:layout_constraintBottom_toBottomOf="@id/productSizeShadow"
+        app:layout_constraintEnd_toEndOf="@id/productSizeShadow"
+        app:layout_constraintStart_toStartOf="@id/productSizeShadow"
+        app:layout_constraintTop_toTopOf="@id/productSizeShadow" />
+
+    <TextView
+        android:id="@+id/productImageSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/productImageColor"
+        app:layout_constraintEnd_toEndOf="@id/productImageColor"
+        app:layout_constraintTop_toTopOf="@id/productImageColor"
+        app:layout_constraintBottom_toBottomOf="@id/productImageColor"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

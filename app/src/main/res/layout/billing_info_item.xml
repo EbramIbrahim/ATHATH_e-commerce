@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintParent">
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/productBillingIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/static_items"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/line"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/productBillingNameTv"
+            android:text="Chair"
+            style="@style/h3"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/productBillingIv"
+            app:layout_constraintStart_toEndOf="@id/productBillingIv"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:id="@+id/productBillingPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$50"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/productBillingNameTv"
+            app:layout_constraintStart_toStartOf="@id/productBillingNameTv"
+            android:textColor="@color/black"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/productBillingColorIv"
+            android:src="@color/g_blue"
+            app:layout_constraintStart_toStartOf="@id/productBillingPriceTv"
+            app:layout_constraintTop_toBottomOf="@id/productBillingPriceTv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/productBillingSizeIv"
+            android:src="@color/g_gray700"
+            app:layout_constraintStart_toEndOf="@id/productBillingColorIv"
+            app:layout_constraintTop_toTopOf="@id/productBillingColorIv"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:id="@+id/productBillingSizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="L"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/productBillingSizeIv"
+            app:layout_constraintEnd_toEndOf="@id/productBillingSizeIv"
+            app:layout_constraintTop_toTopOf="@id/productBillingSizeIv"
+            app:layout_constraintBottom_toBottomOf="@id/productBillingSizeIv"/>
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tvProductQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="10dp"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

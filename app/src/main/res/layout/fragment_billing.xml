@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/cartToolbar"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <ImageView
+                    android:id="@+id/closeBillingIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black" />
+
+                <TextView
+                    style="@style/h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Billing"
+                    app:layout_constraintBottom_toBottomOf="@id/closeBillingIv"
+                    app:layout_constraintStart_toEndOf="@id/closeBillingIv"
+                    app:layout_constraintTop_toTopOf="@id/closeBillingIv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+
+
+
+        <TextView
+            android:id="@+id/tvPaymentMethods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            style="@style/h3"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/cartToolbar"
+            />
+        <TextView
+            android:id="@+id/tvPaymentIsntructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_instructions"
+            app:layout_constraintStart_toStartOf="@id/tvPaymentMethods"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentMethods"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/lines"
+            android:background="@drawable/white_background"
+            android:backgroundTint="@color/g_blue_gray200"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentIsntructions"/>
+        
+
+        <TextView
+            android:id="@+id/tvShoppingAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shopping Address"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/lines"
+            android:layout_marginTop="10dp"
+            app:drawableStartCompat="@drawable/ic_location" />
+
+
+        <ImageView
+            android:id="@+id/ivAddAddress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@id/lines"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddresses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/address_items"
+            app:layout_constraintStart_toStartOf="@id/tvShoppingAddress"
+            app:layout_constraintEnd_toEndOf="@id/ivAddAddress"
+            app:layout_constraintTop_toBottomOf="@id/tvShoppingAddress"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/lines2"
+            android:background="@drawable/white_background"
+            android:backgroundTint="@color/g_blue_gray200"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/rvAddresses"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/billing_info_item"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/lines2"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/lines3"
+            android:background="@drawable/white_background"
+            android:backgroundTint="@color/g_blue_gray200"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/rvProducts"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/totalBoxContainer"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/total_box_background"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/lines3">
+
+
+            <TextView
+                style="@style/h3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="Total:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                style="@style/h3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="$150"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/btnPlaceOrder"
+            style="@style/blueButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/medium_btn_height"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="Place Order"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/totalBoxContainer"
+            app:spinning_bar_color="@color/white" />
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressPb"
+            app:layout_constraintStart_toStartOf="@id/rvAddresses"
+            app:layout_constraintEnd_toEndOf="@id/rvAddresses"
+            app:layout_constraintTop_toTopOf="@id/rvAddresses"
+            app:layout_constraintBottom_toBottomOf="@id/rvAddresses"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/productPb"
+            android:indeterminate="true"
+            app:layout_constraintStart_toStartOf="@id/rvProducts"
+            app:layout_constraintEnd_toEndOf="@id/rvProducts"
+            app:layout_constraintTop_toTopOf="@id/rvProducts"
+            app:layout_constraintBottom_toBottomOf="@id/rvProducts"
+            android:visibility="invisible"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
